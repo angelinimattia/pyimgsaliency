@@ -42,7 +42,7 @@ def evaluate(img_dir,gt_dir,methods):
 			p = np.count_nonzero(gt_image)
 			n = num_pixels - p
 			
-			for v in xrange(0,255):
+			for v in range(0,255):
 				culled = np.copy(sal_image)
 				culled[culled < v] = 0
 				if np.count_nonzero(culled) == 0:
